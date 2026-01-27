@@ -1,4 +1,4 @@
-import LAB_2.Task_1.User;
+import LAB_2.User;
 
 public class Main {
     public static void main(String[] args) {
