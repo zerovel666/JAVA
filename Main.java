@@ -5,13 +5,15 @@ import LAB_2.User;
 import LAB_3.BaseMath;
 import LAB_3.Quadrant;
 import LAB_3.Sum;
+import LAB_8.Graphic;
 
 public class Main {
 
     public static void main(String[] args) {
         // callLabOne();
         // callLabTwo();
-        callLabThree();
+        // callLabThree();
+        callLabEight();
     }
 
     public static void printHeader(String title) {
@@ -138,5 +140,9 @@ public class Main {
         System.out.print("Площадь прямоугольника: " + (length * width));
 
         scanner.close();
+    }
+
+    public static void callLabEight() {
+        new Graphic();
     }
 }
