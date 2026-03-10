@@ -13,7 +13,8 @@ public class Main {
         // callLabOne();
         // callLabTwo();
         // callLabThree();
-        callLabEight();
+        // callLabEight();
+        callLabFour();
     }
 
     public static void printHeader(String title) {
@@ -145,4 +146,362 @@ public class Main {
     public static void callLabEight() {
         new Graphic();
     }
+
+    public static void callLabFour() {
+        printHeader("LAB_4");
+        callLabFourTaskOne();
+        callLabFourTaskTwo();
+        callLabFourTaskThree();
+        callLabFourTaskFour();
+        callLabFourTaskFive();
+        callLabFourTaskSix();
+        callLabFourTaskSeven();
+        callLabFourTaskEight();
+        callLabFourTaskNine();
+        callLabFourTaskTen();
+    }
+
+    public static void callLabFourTaskOne() {
+        printHeader("TASK_1");
+        Scanner scanner = new Scanner(System.in);
+
+        boolean isExit = false;
+
+        while (!isExit) {
+            System.out.print("Введите число для проверки на 0 или нажмите enter для выхода: ");
+            String input = scanner.nextLine();
+
+            if (input.isEmpty()) {
+                System.out.println("Система завершила работу");
+                break;
+            }
+
+            float number;
+            try {
+                number = Float.parseFloat(input);
+            } catch (NumberFormatException e) {
+                System.out.println("Ошибка ввода. Введите число!");
+                continue;
+            }
+
+            if (number > 0) {
+                System.out.println("Введенное число положительно");
+            } else if (number < 0) {
+                System.out.println("Введенное число отрицательно");
+            } else {
+                System.out.println("Введенное число равняется нулю");
+            }
+        }
+
+        scanner.close();
+    }
+
+    public static void callLabFourTaskTwo() {
+        printHeader("TASK_2");
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.print("Введите балл (0-100) или enter для выхода: ");
+            String input = scanner.nextLine();
+
+            if (input.isEmpty())
+                break;
+
+            try {
+                int score = Integer.parseInt(input);
+                if (score < 0 || score > 100) {
+                    System.out.println("Балл должен быть в диапазоне от 0 до 100");
+                } else if (score >= 90) {
+                    System.out.println("Оценка: 5 (Отлично)");
+                } else if (score >= 75) {
+                    System.out.println("Оценка: 4 (Хорошо)");
+                } else if (score >= 60) {
+                    System.out.println("Оценка: 3 (Удовлетворительно)");
+                } else {
+                    System.out.println("Оценка: 2 (Неудовлетворительно)");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Ошибка ввода!");
+            }
+        }
+
+        scanner.close();
+    }
+
+    public static void callLabFourTaskThree() {
+        printHeader("TASK_3");
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.print("Введите первое число (или enter для выхода): ");
+            String input1 = scanner.nextLine();
+            if (input1.isEmpty())
+                break;
+
+            System.out.print("Введите второе число: ");
+            String input2 = scanner.nextLine();
+
+            try {
+                double a = Double.parseDouble(input1);
+                double b = Double.parseDouble(input2);
+
+                if (a > b) {
+                    System.out.println(a + " больше чем " + b);
+                } else if (a < b) {
+                    System.out.println(b + " больше чем " + a);
+                } else {
+                    System.out.println("Числа равны");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Ошибка ввода чисел!");
+            }
+        }
+
+        scanner.close();
+    }
+
+    public static void callLabFourTaskFour() {
+        printHeader("TASK_4");
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.print("Введите номер дня недели (1-7) или enter для выхода: ");
+            String input = scanner.nextLine();
+            if (input.isEmpty())
+                break;
+
+            try {
+                int day = Integer.parseInt(input);
+                switch (day) {
+                    case 1:
+                        System.out.println("Понедельник");
+                        break;
+                    case 2:
+                        System.out.println("Вторник");
+                        break;
+                    case 3:
+                        System.out.println("Среда");
+                        break;
+                    case 4:
+                        System.out.println("Четверг");
+                        break;
+                    case 5:
+                        System.out.println("Пятница");
+                        break;
+                    case 6:
+                        System.out.println("Суббота");
+                        break;
+                    case 7:
+                        System.out.println("Воскресенье");
+                        break;
+                    default:
+                        System.out.println("Нет такого дня недели");
+                        break;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Введите целое число!");
+            }
+
+            scanner.close();
+        }
+    }
+
+    public static void callLabFourTaskFive() {
+        printHeader("TASK_5");
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.print("Введите целое число для проверки на четность или enter для выхода: ");
+            String input = scanner.nextLine();
+            if (input.isEmpty())
+                break;
+
+            try {
+                int num = Integer.parseInt(input);
+                if (num % 2 == 0) {
+                    System.out.println("Число чётное");
+                } else {
+                    System.out.println("Число нечётное");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Ошибка ввода!");
+            }
+        }
+
+        scanner.close();
+    }
+
+    public static void callLabFourTaskSix() {
+        printHeader("TASK_6");
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.print("Введите ваш возраст или enter для выхода: ");
+            String input = scanner.nextLine();
+            if (input.isEmpty())
+                break;
+
+            try {
+                int age = Integer.parseInt(input);
+                if (age >= 18) {
+                    System.out.println("Доступ разрешен");
+                } else if (age < 0) {
+                    System.out.println("Возраст не может быть отрицательным");
+                } else {
+                    System.out.println("Доступ запрещен (вам меньше 18)");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Ошибка ввода!");
+            }
+        }
+        scanner.close();
+
+    }
+
+    public static void callLabFourTaskSeven() {
+        printHeader("TASK_7");
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.print("Введите номер месяца (1-12) или enter для выхода: ");
+            String input = scanner.nextLine();
+            if (input.isEmpty())
+                break;
+
+            try {
+                int month = Integer.parseInt(input);
+                switch (month) {
+                    case 1:
+                    case 3:
+                    case 5:
+                    case 7:
+                    case 8:
+                    case 10:
+                    case 12:
+                        System.out.println("31 день");
+                        break;
+                    case 4:
+                    case 6:
+                    case 9:
+                    case 11:
+                        System.out.println("30 дней");
+                        break;
+                    case 2:
+                        System.out.println("28 или 29 дней (зависит от года)");
+                        break;
+                    default:
+                        System.out.println("Некорректный номер месяца");
+                        break;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Ошибка ввода!");
+            }
+        }
+
+        scanner.close();
+    }
+
+    public static void callLabFourTaskEight() {
+        printHeader("TASK_8");
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.print("Введите температуру или enter для выхода: ");
+            String input = scanner.nextLine();
+            if (input.isEmpty())
+                break;
+
+            try {
+                double temp = Double.parseDouble(input);
+                if (temp < 10) {
+                    System.out.println("Холодно");
+                } else if (temp >= 10 && temp <= 25) {
+                    System.out.println("Тепло");
+                } else {
+                    System.out.println("Жарко");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Ошибка ввода!");
+            }
+        }
+
+        scanner.close();
+    }
+
+    public static void callLabFourTaskNine() {
+        printHeader("TASK_9");
+        Scanner scanner = new Scanner(System.in);
+        int min = 10;
+        int max = 50;
+
+        while (true) {
+            System.out.print("Введите число для проверки диапазона [" + min + "," + max + "] или enter для выхода: ");
+            String input = scanner.nextLine();
+            if (input.isEmpty())
+                break;
+
+            try {
+                double val = Double.parseDouble(input);
+                if (val >= min && val <= max) {
+                    System.out.println("Число входит в диапазон");
+                } else {
+                    System.out.println("Число ВНЕ диапазона");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Ошибка ввода!");
+            }
+        }
+
+        scanner.close();
+    }
+
+    public static void callLabFourTaskTen() {
+        printHeader("TASK_10");
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.print("Введите первое число (или enter для выхода): ");
+            String in1 = scanner.nextLine();
+            if (in1.isEmpty())
+                break;
+
+            System.out.print("Введите второе число: ");
+            String in2 = scanner.nextLine();
+
+            System.out.print("Введите операцию (+, -, *, /): ");
+            String op = scanner.nextLine();
+
+            try {
+                double a = Double.parseDouble(in1);
+                double b = Double.parseDouble(in2);
+
+                switch (op) {
+                    case "+":
+                        System.out.println("Результат: " + (a + b));
+                        break;
+                    case "-":
+                        System.out.println("Результат: " + (a - b));
+                        break;
+                    case "*":
+                        System.out.println("Результат: " + (a * b));
+                        break;
+                    case "/":
+                        if (b != 0) {
+                            System.out.println("Результат: " + (a / b));
+                        } else {
+                            System.out.println("Ошибка: деление на ноль!");
+                        }
+                        break;
+                    default:
+                        System.out.println("Неизвестная операция");
+                        break;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Ошибка в числах!");
+            }
+        }
+
+        scanner.close();
+    }
+
 }
