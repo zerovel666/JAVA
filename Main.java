@@ -6,6 +6,16 @@ import LAB_3.BaseMath;
 import LAB_3.Quadrant;
 import LAB_3.Sum;
 import LAB_8.Graphic;
+import LAB_9.Animal;
+import LAB_9.Bird;
+import LAB_9.Car;
+import LAB_9.Cat;
+import LAB_9.Dog;
+import LAB_9.Professor;
+import LAB_9.SUV;
+import LAB_9.Sedan;
+import LAB_9.Student;
+import LAB_9.Truck;
 
 public class Main {
 
@@ -14,7 +24,8 @@ public class Main {
         // callLabTwo();
         // callLabThree();
         // callLabEight();
-        callLabFour();
+        // callLabFour();
+        callLabNine();
     }
 
     public static void printHeader(String title) {
@@ -159,6 +170,13 @@ public class Main {
         callLabFourTaskEight();
         callLabFourTaskNine();
         callLabFourTaskTen();
+    }
+
+    public static void callLabNine() {
+        printHeader("LAB_9");
+        // callLabNineTaskOne();
+        callLabNineTaskTwo();
+        callLabNineTaskThree();
     }
 
     public static void callLabFourTaskOne() {
@@ -504,4 +522,45 @@ public class Main {
         scanner.close();
     }
 
+    public static void callLabNineTaskOne() {
+        printHeader("TASK_1");
+        Car sedan = new Sedan(120);
+        Car truck = new Truck(80);
+        Car suv = new SUV(100);
+
+        sedan.showSpeed();
+        System.out.println("Расход: " + sedan.fuelConsumption());
+
+        truck.showSpeed();
+        System.out.println("Расход: " + truck.fuelConsumption());
+
+        suv.showSpeed();
+        System.out.println("Расход: " + suv.fuelConsumption());
+    }
+
+    public static void callLabNineTaskTwo() {
+        printHeader("TASK_2");
+        Animal dog = new Dog();
+        Animal cat = new Cat();
+        Animal bird = new Bird();
+
+        dog.makeSound();
+        cat.makeSound();
+        bird.makeSound();
+    }
+
+    public static void callLabNineTaskThree() {
+        printHeader("TASK_3");
+
+        Student student = new Student("Азизбек", 20, 2);
+        Professor professor = new Professor("Артем", 45, "Математика");
+
+        student.showInfo();
+        student.study();
+
+        System.out.println();
+
+        professor.showInfo();
+        professor.teach();
+    }
 }
