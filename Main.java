@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 import LAB_1.StudentInfo;
+import LAB_12.Tasks;
 import LAB_2.User;
 import LAB_3.BaseMath;
 import LAB_3.Quadrant;
@@ -25,7 +26,8 @@ public class Main {
         // callLabThree();
         // callLabEight();
         // callLabFour();
-        callLabNine();
+        // callLabNine();
+        callLabTwelve();
     }
 
     public static void printHeader(String title) {
@@ -562,5 +564,11 @@ public class Main {
 
         professor.showInfo();
         professor.teach();
+    }
+
+    public static void callLabTwelve() {
+        printHeader("LAB_12");
+        Tasks tasks = new Tasks();
+        tasks.execute();
     }
 }
