@@ -1,6 +1,9 @@
 import java.util.Scanner;
 
 import LAB_1.StudentInfo;
+import LAB_11.GUICalc;
+import LAB_11.SimpleCalc;
+import LAB_11.WhileCalc;
 import LAB_12.Tasks;
 import LAB_2.User;
 import LAB_3.BaseMath;
@@ -27,7 +30,8 @@ public class Main {
         // callLabEight();
         // callLabFour();
         // callLabNine();
-        callLabTwelve();
+        callLabEleven();
+        // callLabTwelve();
     }
 
     public static void printHeader(String title) {
@@ -570,5 +574,20 @@ public class Main {
         printHeader("LAB_12");
         Tasks tasks = new Tasks();
         tasks.execute();
+    }
+
+    public static void callLabEleven() {
+        printHeader("LAB_11");
+        printHeader("TASK_1");
+        SimpleCalc simpleCalc = new SimpleCalc();
+        simpleCalc.simpleCalculator();
+
+        printHeader("TASK_2");
+        WhileCalc whileCalc = new WhileCalc();
+        whileCalc.calculatorWithLoop();
+
+        printHeader("TASK_3");
+        GUICalc gui = new GUICalc();
+        gui.calculatorGUI();
     }
 }
