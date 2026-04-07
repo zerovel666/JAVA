@@ -10,6 +10,6 @@ public class Person {
     }
 
     public void showInfo() {
-        System.out.println("Наименование: " + name + ", age: " + age);
+        System.out.println("Имя: " + name + ", age: " + age);
     }
 }
