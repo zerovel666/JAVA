@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 import LAB_1.StudentInfo;
 import LAB_11.GUICalc;
 import LAB_11.SimpleCalc;
@@ -20,6 +18,8 @@ import LAB_9.SUV;
 import LAB_9.Sedan;
 import LAB_9.Student;
 import LAB_9.Truck;
+import SRO.BinaryTree;
+import java.util.Scanner;
 
 public class Main {
 
@@ -30,8 +30,9 @@ public class Main {
         // callLabEight();
         // callLabFour();
         // callLabNine();
-        callLabEleven();
+        // callLabEleven();
         // callLabTwelve();
+        callSRO();
     }
 
     public static void printHeader(String title) {
@@ -589,5 +590,19 @@ public class Main {
         printHeader("TASK_3");
         GUICalc gui = new GUICalc();
         gui.calculatorGUI();
+    }
+
+    public static void callSRO(){
+        BinaryTree tree = new BinaryTree();
+        
+        int[] elements = {50, 30, 70, 20, 40, 60, 80};
+        for (int el : elements) tree.insert(el);
+
+        int target = 60;
+        if (tree.containsNode(target)) {
+            System.out.println("Элемент " + target + " найден в дереве.");
+        } else {
+            System.out.println("Элемент " + target + " не найден.");
+        }
     }
 }
